@@ -88,6 +88,10 @@ public class KthLargestElementInBST {
         return -1; // This line should never be reached if k is valid
     }
 
+    /*
+    Time Complexity: O(n), where n is the number of nodes in the tree. Every node is visited at most twice.
+    Space Complexity: O(1), as no extra space is used apart from variables for traversal and counting.
+     */
     public static int kthLargestUsingMorrisTraversal(Node root, int k) {
         Node current = root;
         int count = 0;
