@@ -148,6 +148,73 @@ Honestly, the bureaucracy can sometimes make it tough to see your individual imp
 </ul>
 </details>
 <details>
+<summary><b>What’s the Number One Accomplishment You’re Most Proud Of?</b></summary>
+<ul>
+    <li>
+        <b>Situation: </b>In my role as an SDE II at Walmart Global tech Company, I was given the opportunity to own a feature from the scratch called "Survey Snack" for our Customer Perception Application. This feature was intended to allow users to create mini-surveys with 4-5 questions as part of their daily tasks. These surveys would close automatically after 7 days or once the target number of responses was achieved. Only specific accounts could create these surveys, and they could only be launched by a researcher who approved them, either manually or through a scheduler. Initially, I was apprehensive about taking on such a significant project independently, but I was eager to prove myself.
+    </li>
+    <li>
+        <b>Task: </b>The main objective was to design, develop, and deploy the Survey Snack feature from scratch. This included gathering requirements, preparing high-level and low-level design documents, presenting the design to my manager, peers, and the product team, and working closely with the UI, QA, and Product teams to ensure successful implementation. The feature needed to be reliable, user-friendly, and align with the company's standards and expectations.
+    </li>
+    <li>
+        <b>Action: </b>I took several steps to manage this situation:
+        <ol>
+            <li>
+            Requirement Gathering: 
+               <ul>
+                  <li>Conducted interviews with stakeholders, including product managers and researchers, to understand their needs and expectations.</li>
+                  <li>Documented detailed requirements and created user stories for the development process.</li>
+               </ul>
+            </li>
+            <li>
+            Design Preparation: 
+               <ul>
+                  <li>Developed high-level (HLD) and low-level design (LLD) documents outlining possible approaches for implementing the feature.</li>
+                  <li>Included detailed diagrams and flowcharts to illustrate the system architecture, data flow, and interaction between components.</li>
+               </ul>
+            </li>
+            <li>
+            Presentation and Feedback:
+               <ul>
+                  <li>Presented the HLD and LLD to my manager, peers, and the product team.</li>
+                  <li>Incorporated feedback and made necessary adjustments to the design.</li>
+               </ul>
+            </li>
+            <li>
+            Development: 
+               <ul>
+                  <li>Implemented the backend logic for survey creation, scheduling, and automatic closing using microservices architecture.</li>
+                  <li>Developed a user-friendly UI in collaboration with the UI team, ensuring it was intuitive and met the design specifications.</li>
+                  <li>Integrated the feature with our existing system, working closely with the QA team to identify and resolve any issues.</li>
+               </ul>
+            </li>
+            <li>
+            Testing and Deployment: 
+               <ul>
+                  <li>Conducted thorough unit and integration testing to ensure the feature was robust and reliable.</li>
+                  <li>Performed user acceptance testing (UAT) with a select group of users to gather feedback and make final adjustments.</li>
+                  <li>Successfully deployed the feature to production, coordinating with the operations team to ensure a smooth rollout.</li>
+               </ul>
+            </li>
+        </ol>
+    </li>
+    <li>
+        <b>Result: </b>The Survey Snack feature was a significant success. Upon release, it received positive feedback from users and stakeholders. Specifically:
+         <ul>
+            <li><b>Increased User Engagement: </b>The feature saw a high adoption rate, with a 25% increase in daily active users participating in surveys.
+            </li>
+            <li><b>Efficiency and Reliability: </b>The automatic closing mechanism reduced manual intervention by 40%, leading to more efficient survey management.
+            </li>
+            <li><b>Positive Feedback:</b> Users appreciated the ease of creating and managing surveys, leading to a 30% increase in overall user satisfaction ratings.
+            </li>
+            <li><b>Personal Growth:</b> This project significantly boosted my confidence in handling end-to-end feature development and reinforced my problem-solving and leadership skills.
+            </li>
+         </ul>
+         By taking ownership of the Survey Snack feature, I demonstrated Amazon's leadership principles of Ownership, Customer Obsession, Invent and Simplify, and Deliver Results. I took a long-term view, focusing on creating a high-quality feature that met customer needs while also simplifying the survey creation process. This accomplishment not only contributed to the success of our product but also helped me grow as a leader and a developer.
+    </li>
+</ul>
+</details>
+<details>
 <summary><b>Tell me about a situation when you had a conflict with a teammate.</b></summary>
 <ul>
     <li>
@@ -790,19 +857,6 @@ Honestly, the bureaucracy can sometimes make it tough to see your individual imp
         Moreover, I believe in taking proactive breaks to avoid burnout. Short, regular intervals of rest or engaging in activities unrelated to work, like a quick walk or meditation, help me recharge and maintain focus.
         Additionally, I leverage tools and automation to increase efficiency. For instance, automating repetitive tasks or using project management tools to keep track of deadlines and dependencies can significantly reduce the workload.
         Ultimately, being adaptable, continuously communicating with my team, and efficiently managing my time are the strategies I use to handle a heavy workload effectively while ensuring high-quality outputs in my software development projects.
-    </li>
-</ul>
-</details>
-<details>
-<summary><b>What’s the Number One Accomplishment You’re Most Proud Of?</b></summary>
-<ul>
-    <li>
-    The accomplishment I am most proud of in my career as a software developer is leading the development and successful launch of a comprehensive inventory management system at my previous company, a mid-sized e-commerce business. This project stands out for me because of the significant challenges we faced, the technical skills I had to employ, and the impact it had on the company’s operations.
-    When I took on this project, the company was struggling with an outdated inventory system that was inefficient and prone to errors. My task was to develop a new system that could automate various tasks, handle large volumes of data, and provide real-time inventory tracking.
-    I led a small team of developers and worked closely with the operations department to understand their processes and requirements. We decided to use a modern tech stack, which included Python for backend development and Angular for the frontend. One of the major challenges was integrating the new system with our existing e-commerce platform and various external APIs for real-time data syncing.
-    After months of hard work, including coding, rigorous testing, and several iterations based on user feedback, we successfully deployed the system. The new inventory management system dramatically improved the accuracy and efficiency of stock handling. It enabled real-time inventory tracking, automated reordering, and provided valuable insights through data analytics, significantly reducing overstock and stockouts.
-    The impact of this project was immense – it not only improved operational efficiency but also contributed to a 20% reduction in operational costs and a noticeable improvement in customer satisfaction due to better stock management.
-    This project was a testament to the power of technology in solving real business problems. It challenged me to push my technical and leadership skills to new levels and was incredibly rewarding to see the tangible benefits it brought to the company.
     </li>
 </ul>
 </details>
