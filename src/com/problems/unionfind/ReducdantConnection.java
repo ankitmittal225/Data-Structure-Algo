@@ -139,7 +139,7 @@ public class ReducdantConnection {
      */
     public static int[] redundantConnectionUnionFind(int[][] edges) {
 
-        UnionFind connections = new UnionFind(edges.length);
+        UnionFindReducdant connections = new UnionFindReducdant(edges.length);
 
         for (int[] edge : edges) {
             int v1 = edge[0];
@@ -172,13 +172,13 @@ public class ReducdantConnection {
  *
  * In the find function, for a node v, we make the found root as the parent of v so that we don’t have to traverse all the intermediate nodes again on further find operations.
  */
-class UnionFind {
+class UnionFindReducdant {
 
     public int[] parent;
     public int[] rank;
 
     // Constructor
-    public UnionFind(int n) {
+    public UnionFindReducdant(int n) {
 
         parent = new int[n + 1];
         rank = new int[n + 1];

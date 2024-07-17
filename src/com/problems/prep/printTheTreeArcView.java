@@ -1,9 +1,11 @@
-package com.problems;
+package com.problems.prep;
 
 
 import java.util.*;
 
 /**
+ * Question : Given an N-ary tree, print the nodes seen by a person when walking from bottom left to bottom right in an arc via root node.
+ *
  * To solve this problem of printing nodes seen from bottom left to bottom right in an arc via the root node for an N-ary tree, we can follow these steps:
  *
  * 1. Perform a Breadth-First Search (BFS) to traverse the tree level by level.
@@ -114,9 +116,20 @@ public class printTheTreeArcView {
 
 }
 
-//follow up question :
 /**
+ * Time Complexity :
+ * Tree Traversal: Each traversal (leftmost and rightmost) processes each node once,
+ * resulting in a time complexity of O(N), where N is the number of nodes in the tree.
+ *
+ * Overall Complexity: The overall complexity is O(N) since each node is processed a fixed number of times.
+ */
+//follow-up question :
+/**
+ *
  * Can the problem can be solved with depth first search?
- * Depth-First Search (DFS) Solution
- * The problem can be solved using Depth-First Search (DFS) as well, but it would be more complex to handle levels and ensure that the leftmost and rightmost nodes at each level are captured correctly. DFS is not as natural for this problem as BFS because BFS inherently processes nodes level by level, which aligns with our requirement to keep track of leftmost and rightmost nodes at each level.
+ * Answer :The problem can be solved using Depth-First Search (DFS) as well,
+ * but it would be more complex to handle levels and ensure that the leftmost and rightmost nodes at each
+ * level are captured correctly. DFS is not as natural for this problem as BFS because BFS inherently processes
+ * nodes level by level,
+ * which aligns with our requirement to keep track of leftmost and rightmost nodes at each level.
  */
