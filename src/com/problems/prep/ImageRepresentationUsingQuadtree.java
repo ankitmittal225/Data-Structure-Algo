@@ -1,4 +1,4 @@
-package com.problems;
+package com.problems.prep;
 
 class QuadTreeNode {
     int val;
@@ -64,6 +64,7 @@ public class ImageRepresentationUsingQuadtree {
 //        return new QuadTreeNode(0, false, topLeft, topRight, bottomLeft, bottomRight, length);
     }
 
+    //This method will determine if all pixels in a given region are the same.
     private static boolean isUniform(int[][] image, int x, int y, int length) {
         int val = image[x][y];
         for (int i = x; i < x + length; i++) {
@@ -98,6 +99,11 @@ public class ImageRepresentationUsingQuadtree {
         }
     }
 
+    private static void printQuadTree(QuadTreeNode node){
+
+    }
+
+
     public static void main(String[] args) {
         int[][] image = {
                 {2, 2, 3, 3},
@@ -108,6 +114,9 @@ public class ImageRepresentationUsingQuadtree {
 
         QuadTreeNode root = buildQuadTree(image);
         System.out.println("QuadTree built successfully.");
+        print(root);
+
+
 
         int[][] decompressedImage = unarchiveQuadTree(root, image.length);
 
@@ -118,6 +127,25 @@ public class ImageRepresentationUsingQuadtree {
                 System.out.print(val + " ");
             }
             System.out.println();
+        }
+    }
+
+    public static void print(QuadTreeNode root) {
+        print(root, 0, 0, 0);
+    }
+
+    private  static void print(QuadTreeNode node, int level, int x, int y) {
+        if (node == null) return;
+
+        for (int i = 0; i < level; i++) System.out.print(" ");
+        if (node.isLeaf) {
+            System.out.println("Leaf: (" + x + ", " + y + ") = " + node.val);
+        } else {
+            System.out.println("Node at level " + level);
+            print(node.topLeft, level + 1, x, y);
+            print(node.topRight, level + 1, x, y + (1 << (level)));
+            print(node.bottomLeft, level + 1, x + (1 << (level)), y);
+            print(node.bottomRight, level + 1, x + (1 << (level)), y + (1 << (level)));
         }
     }
 }
