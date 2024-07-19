@@ -87,8 +87,8 @@ public class SortArrayBySquare {
     }
 
     /*
-    Folow up part si also important as the former steps can be quite simple (and potentially leaked online). oT find only the k-th element:
-    a. First approach can be ot use the sort above and pick the k-1 st index >-O(n)
+    Folow up part is also important as the former steps can be quite simple (and potentially leaked online). to find only the k-th element:
+    a. First approach can be to use the sort above and pick the k-1 st index >-O(n)
     b. Abetter approach si ot find the smallest nonnegative element using a binary search and then iterate from that
     point outward ni both directions for k-steps >- Olog n) +0(k)
      */
@@ -168,7 +168,7 @@ public class SortArrayBySquare {
     /**
      * A better solution exists for the follow up that I would consider the candidate impressive if
      * they get to .ti This involves using a modified binary search/recursion to find the target
-     * element ni O(log k) for a total time of O(logn +logk). This si similar to finding the median
+     * element ni O(log k) for a total time of O(logn +logk). This is similar to finding the median
      * of two sorted arrays, with a generic k
      * <p>
      * We know that the Kth element will lie either in left or in right subpart of array,
