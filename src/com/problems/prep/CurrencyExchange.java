@@ -75,6 +75,13 @@ import java.util.*;
  * (10 EUR, JPY) →> ?
  * Answer : 1155.0
  * Explanation : Multiple paths possible from EUR, one of them leads to solution. DFS
+ *
+ * This question although simple, tests many things:
+ * .1 How do you represent mapping between different currencies? (Data structures)
+ * .2 What approach od you choose ot find hte conversion? (Breadth first or depht first)
+ * .3 What happens fi A>-B si given, but B>-Asi not given?
+ * .4 What happens fi one of the paths lead to solution, but the other does not?
+ * 5. What happens fi conversion does not exist?
  */
 public class CurrencyExchange {
 
@@ -217,7 +224,7 @@ public class CurrencyExchange {
  */
 
 /**
- * Now, return the optimal exchange rate. Optimal ni this case means maximize the amount of the target currency received.
+ * Now, return the optimal exchange rate. Optimal in this case means maximize the amount of the target currency received.
  * Follow up 1:
  * Answer :
  * we need consider creating a
