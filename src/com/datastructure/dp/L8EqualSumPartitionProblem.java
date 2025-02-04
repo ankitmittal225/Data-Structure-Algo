@@ -1,6 +1,7 @@
 package com.datastructure.dp;
 
 /**
+ * Problem Type : 0-1 KnapSack problem (either will pick a value or we won't)
  * The partition problem is to determine whether a given set can be partitioned into
  *  two subsets such that the sum of elements in both subsets is the same.
  */
@@ -10,8 +11,9 @@ public class L8EqualSumPartitionProblem {
         System.out.println(isEqualSumSubsetPossible(new int[]{},0));//false
         System.out.println(isEqualSumSubsetPossible(new int[]{1,5,11,5},4));//true
         System.out.println(isEqualSumSubsetPossible(new int[]{1,5,3},3));//false
-        System.out.println(isEqualSumSubsetPossible(new int[]{2,2,3,2,5,6},6));//false
+        System.out.println(isEqualSumSubsetPossible(new int[]{2,2,3,2,5,6},6));//true
     }
+
 
     //concept is sum1-sum2=0
     private static boolean isEqualSumSubsetPossible(int[] arr, int n){
@@ -20,6 +22,16 @@ public class L8EqualSumPartitionProblem {
             sum=sum+num;
         }
         return sum % 2 == 0 && isSubsetSumExists(arr, n, sum / 2);
+//        return sum % 2 == 0 && isSubsetSumExists(arr, n, sum / 2);
+    }
+
+    private static boolean isSubsetSumExistsUsingRecursion(int[] arr, int n, int sum) {
+        if(arr[n-1]<=sum){
+            return isSubsetSumExistsUsingRecursion(arr,n-1,sum-arr[n-1]) || isSubsetSumExistsUsingRecursion(arr, n-1, sum);
+        }
+        else{
+            return isSubsetSumExistsUsingRecursion(arr,n-1,sum);
+        }
     }
 
 

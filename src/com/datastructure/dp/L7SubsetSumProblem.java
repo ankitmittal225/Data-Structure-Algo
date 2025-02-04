@@ -1,5 +1,13 @@
 package com.datastructure.dp;
 
+/**
+ * Problem Type : 0-1 KnapSack problem (either will pick a value or we won't)
+ * Given a set of non-negative integers, and a value sum, determine if there is a subset of the given set with sum equal to given sum.
+ * Example:
+ *
+ * Input:  set[] = {3, 34, 4, 12, 5, 2}, sum = 9
+ * Output:  True  //There is a subset (4, 5) with sum 9.
+ */
 public class L7SubsetSumProblem {
 
     public static void main(String[] args) {
@@ -7,6 +15,17 @@ public class L7SubsetSumProblem {
         System.out.println(isSubsetSumExists(new int[]{2,3,7,8,10},5, 11));//true
         System.out.println(isSubsetSumExists(new int[]{3, 34, 4, 12, 5, 2},6, 9));//true
         System.out.println(isSubsetSumExists(new int[]{3, 34, 4, 12, 5, 2},6, 30));//false
+    }
+
+    public static boolean isSubsetSumExistsRecursion(int[] arr, int n, int sum){
+        if(arr==null || arr.length==0 || n<=0) return false;
+        if(sum==0) return true;
+        if(arr[n-1]<=sum){
+            return isSubsetSumExistsRecursion(arr, n-1,sum-arr[n-1])||isSubsetSumExists(arr, n-1,sum);
+        }
+        else{
+            return isSubsetSumExistsRecursion(arr, n-1,sum);
+        }
     }
 
     private static boolean isSubsetSumExists(int[] arr, int n, int sum) {

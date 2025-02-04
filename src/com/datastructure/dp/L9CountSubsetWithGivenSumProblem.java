@@ -1,6 +1,7 @@
 package com.datastructure.dp;
 
 /**
+ * Problem Type : 0-1 KnapSack problem (either will pick a value or we won't)
  * Count of subsets sum with a Given sum
  * Given an array arr[] of length N and an integer X, the task is to find the number of subsets with sum equal to X.
  * Example:
@@ -13,7 +14,8 @@ package com.datastructure.dp;
 public class L9CountSubsetWithGivenSumProblem {
 
     public static void main(String[] args) {
-        System.out.println(getCountSubsetWithGivenSum(new int[]{},0,0));//false
+        System.out.println(getCountSubsetWithGivenSum(new int[]{},0,0));
+        System.out.println(getCountSubsetWithGivenSum(new int[]{1,1,2,3},4,1));//false
         System.out.println(getCountSubsetWithGivenSum(new int[]{1,2,3,3},4,6));//3
         System.out.println(getCountSubsetWithGivenSum(new int[]{1,2,3,3},4,3));//3
         System.out.println(getCountSubsetWithGivenSum(new int[]{1,2,3,3},4,1));//3
@@ -26,10 +28,10 @@ public class L9CountSubsetWithGivenSumProblem {
         if(arr==null || arr.length==0) return 0;
         int[][] t= new int[n+1][sum+1];
         //initialisation
-        for (int i = 0; i <= n; i++) {
+        for(int i=0;i<=n;i++){
             t[i][0]=1;
         }
-        for (int i = 1; i <=sum; i++) {
+        for(int i=1;i<=sum;i++){
             t[0][i]=0;
         }
 

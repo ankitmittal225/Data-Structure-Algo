@@ -5,31 +5,48 @@ import java.util.List;
 
 /**
  * Problem Type : 0-1 KnapSack problem (either will pick a value or we won't)
- * Sum of subset differences
- * Given a set of integers, the task is to divide it into two sets S1 and S2 such that the absolute difference between their sums is minimum.
- * If there is a set S with n elements, then if we assume Subset1 has m elements, Subset2 must have n-m elements and the value of abs(sum(Subset1) – sum(Subset2)) should be minimum.
- * Example:
+ * Target Sum Problem
+ * Given a list of non-negative integers, a1, a2, ..., an, and a target, S. Now you have 2 symbols + and -. For each integer, you should choose one from + and - as its new symbol.
  *
- * Example:
- * Input: arr[] = {1, 6, 11, 5}
- * Output: 1
+ * Find out how many ways to assign symbols to make sum of integers equal to target S.
+ *
+ * Example 1:
+ * Input: nums is [1, 1, 1, 1, 1], S is 3.
+ * Output: 5
  * Explanation:
- * Subset1 = {1, 5, 6}, sum of Subset1 = 12
- * Subset2 = {11}, sum of Subset2 = 11
+ *
+ * -1+1+1+1+1 = 3
+ * +1-1+1+1+1 = 3
+ * +1+1-1+1+1 = 3
+ * +1+1+1-1+1 = 3
+ * +1+1+1+1-1 = 3
+ *
+ * Example 2:
+ * Input: nums is [1, 1, 2, 3], S is 1.
+ * Output: 3
+ * Explanation:
+ *
+ * +1-1-2+3 = 1
+ * -1+1-2+3 = 1
+ * +1+1+2-3 = 1
+ *
+ *
+ * Approach toward solution :
+ * We can consider we get two subset s1, s2 after assigning + & - operator whose sum needs to be given value Sum
+ * i.e. s1-s2 = sum (s1 is all positive sign value sum & s2 is all negative sign value sum)
+ * if we take a look at this statement its like subset sum problem
+ * where we need to find count of subset with given diff as sum
+ *
+ * Equal to subset sum difference problem
+ *
  */
-public class L11CountSubsetWithGivenDifferenceProblem {
+public class L12TargetSumProblem {
 
     public static void main(String[] args) {
         System.out.println(getCountSubsetWithGivenDifference(new int[]{},0,0));//0
-        System.out.println(getCountSubsetWithGivenDifference(new int[]{1, 1, 2,3},4,1));//3
-//        System.out.println(getCountSubsetWithGivenDifference(new int[]{3, 5, 11, 7},4));//2
-//        System.out.println(getCountSubsetWithGivenDifference(new int[]{1, 1, 1, 1},4));//0
-//        System.out.println(getCountSubsetWithGivenDifference(new int[]{1, 5, 11, 5},4));//0
-//        System.out.println(getCountSubsetWithGivenDifference(new int[]{1, 6, 11, 5},4));//1
-//        System.out.println(getMinSubsetSumDifference(new int[]{},0));//0
-//        System.out.println(getMinSubsetSumDifference(new int[]{1, 2, 7,11},4));//1
-//        System.out.println(getMinSubsetSumDifference(new int[]{3, 5, 11, 7},4));//2
-//        System.out.println(getMinSubsetSumDifference(new int[]{1, 1, 1, 1},4));//0
+        System.out.println(getCountSubsetWithGivenDifference(new int[]{1, 1, 1, 1, 1},5,3));//5
+        System.out.println(getCountSubsetWithGivenDifference(new int[]{1},1,1));//1
+        System.out.println(getCountSubsetWithGivenDifference(new int[]{1,1,2,3},4,1));//3
     }
 
 
